@@ -1,3 +1,22 @@
 document.getElementById('btnTest').onclick = function() {
-  document.getElementById('btnTest').textContent = Date.now().toString();
+  const code = document.getElementById('txtCode').value;
+
+  fetch("https://api.github.com/user", {
+    method: "GET",
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+      "Accept": "application/vnd.github.raw+json",
+      "Authorization": `Bearer ${code}`,
+      "X-GitHub-Api-Version": "2022-11-28",
+      "User-Agent": "psn-test"
+    }
+  })
+  .then((response) => response.json())
+  .then((json) => function(json) {
+    console.log(json);
+    const obj = JSON.parse(json);
+    document.getElementById('btnTest').textContent = obj.login;
+  });
+  
+  return false;
 };
