@@ -12,7 +12,7 @@ document.getElementById('btnTest').onclick = function() {
     }
   })
   .then((response) => response.json())
-  .then((json) => function(json) {
+  .then((json) => {
     console.log(json);
     const obj = JSON.parse(json);
     document.getElementById('btnTest').textContent = obj.login;
