@@ -3,6 +3,10 @@
   src: URL('fonts/Inkfree.ttf') format('truetype');
 }
 
+body.default_font_type {
+  font-family: 'Lato', sans-serif;
+}
+
 .inkfree {
   font-family: 'Ink Free'
 }
