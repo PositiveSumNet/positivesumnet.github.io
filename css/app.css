@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'Ink Free';
+  src: URL('fonts/Inkfree.ttf') format('truetype');
+}
+
+.inkfree {
+  font-family: 'Ink Free'
+}
+
+.logo_dark_blue {
+  color: #14416A
+}
+
+.left_nav_section {
+  height: 100vh;
+  top: 0px;
+}
+
+.profile_icon {
+  bottom: 20px;
+}
+
+.profile_icon img {
+  border-radius: 50%;
+}
+
+.happening_box {
+  background-color: #efefef;
+  border-radius: 10px;
+}
